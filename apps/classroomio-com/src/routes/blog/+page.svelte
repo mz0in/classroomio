@@ -14,7 +14,7 @@
       class="mx-auto text-3xl md:text-4xl lg:text-6xl font-normal leading-[1.5] text-slate-900 flex flex-col items-center"
     >
       <span>What's new on</span>
-      <span class="text-[#1D4EE2] relative"
+      <span class="text-blue-700 relative"
         >ClassroomIO?
         <svg
           aria-hidden="true"
@@ -56,7 +56,7 @@
           </a>
 
           <div class="flex items-center justify-start gap-4 my-2">
-            <img src={post.avatar} alt="avatar" class="w-10 h-10 rounded-full" />
+            <img loading="lazy" src={post.avatar} alt="avatar" class="w-10 h-10 rounded-full" />
             <span>
               <p class="font-semibold">{post.author}</p>
               <p class="text-slate-500">{post.role}</p>

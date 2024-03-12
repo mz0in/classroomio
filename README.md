@@ -1,8 +1,8 @@
 <a href="https://classroomio.com/">
-  <img alt="ClassroomIO is a no-code tool that allows you build and scale your own teaching platform with ease." src="https://classroomio.com/classroomio-opengraph-image.png" />
+  <img alt="ClassroomIO is a no-code tool that allows you build and scale your own teaching platform with ease." src="https://raw.githubusercontent.com/rotimi-best/classroomio/main/apps/classroomio-com/static/classroomio-opengraph-image.png" />
   <h1 align="center">ClassroomIO.com</h1>
   <p align="center">
-    The Open Source Teaching Platform for Tech Bootcamps
+    The Open Source Teaching Platform
     <br />
     <a href="https://classroomio.com">Website</a>  |  <a href="https://dub.sh/ciodiscord">Join Discord community</a>
   </p>
@@ -14,9 +14,9 @@
 
 ## ✨ About ClassroomIO.com
 
-<img alt="ClassroomIO Courses page" src="https://classroomio.com/classroomio-courses.png" />
+<img alt="ClassroomIO Courses page" src="https://raw.githubusercontent.com/rotimi-best/classroomio/main/apps/classroomio-com/static/classroomio-courses.png" />
 
-ClassroomIO.com is a platform for bootcamps, individual educators, and training businesses that brings teaching and learning into one place while at the same time helping them be 10x more productive. With our platform, anyone can run multiple classes and cohorts all from one UI. The application is mobile-first, which means that students can access your lesson materials from any device.
+Streamline training for everyone with ClassroomIO.com. Our all-in-one platform empowers bootcamps, educators, and businesses to manage training programs easily. With our platform, anyone can run multiple classes and cohorts all from one UI. The application is mobile-first, which means that students can access your lesson materials from any device.
 
 ### Mission: Provide Students with the Best Learning Experience
 
@@ -76,8 +76,9 @@ Here is what you need to be able to run ClassroomIO.com
 This repo is a mono repo that consists of 3 projects:
 
 1. `classroomio-com`: The landing page of ClassroomIO hosted [here](https://classroomio.com)
-2. `dashboard`: The web application that runs the learning management system.
-3. `docs`: Official documentation of ClassroomIO hosted [here](https://classroomio.com/docs)
+2. `backend`: The backend service that handles PDF & video processing.
+3. `dashboard`: The web application that runs the learning management system hosted [here](https://app.classroomio.com).
+4. `docs`: Official documentation of ClassroomIO hosted [here](https://classroomio.com/docs)
 
 ## Development
 
@@ -154,7 +155,6 @@ This repo is a mono repo that consists of 3 projects:
      ```env
        PUBLIC_SUPABASE_URL=<API URL>
        PUBLIC_SUPABASE_ANON_KEY=<anon key>
-       PUBLIC_SUPABASE_BUCKET_URL=<Inbucket URL>
      ```
 
    - To view the Supabase studio, open the Studio URL from the result of `pnpm supabase start`
@@ -174,10 +174,17 @@ This repo is a mono repo that consists of 3 projects:
 8. All projects should start running
 
    - `classroomio-com`: [http://localhost:5173](http://localhost:5173)
+   - `backend`: [http://localhost:3002](http://localhost:3002)
    - `dashboard`: [http://localhost:5174](http://localhost:5174)
    - `docs`: [http://localhost:3000](http://localhost:3000)
 
 9. Running a specific project
+
    - **classroomio-com**: `pnpm dev --filter=classroomio-com`
+   - **backend**: `pnpm dev --filter=backend`
    - **dashboard**: `pnpm dev --filter=dashboard`
    - **docs**: `pnpm dev --filter=docs`
+
+10. Login into `dashboard`.
+
+To learn how to login into the dashboard please [go here](https://classroomio.com/docs/contributor-guides/demo-accounts)
